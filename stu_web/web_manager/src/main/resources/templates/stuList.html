@@ -22,7 +22,7 @@
         <td th:text="${stu.name}"></td>
         <td th:text="${stu.age}"></td>
         <td th:text="${#dates.format(stu.birthday, 'yyyy-MM-dd')}"></td>
-        <!--<td th:text="${stu.cls.cname}"></td>-->
+        <td th:text="${stu.cls.cname}"></td>
         <td><a href="/stu/toAdd">增加</a>
             <a th:href="|/stu/del?id=${stu.id}|">删除</a>
             <a th:href="|/stu/queryById?id=${stu.id}|">修改</a>
