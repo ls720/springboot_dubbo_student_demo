@@ -1,0 +1,12 @@
+dubbo:
+    application:
+      name: cls-service
+    registry:
+        address: zookeeper://119.23.255.72:2181
+spring:
+    cache: false
+    datasource:
+        url: jdbc:mysql:///test1?serverTimezone=GMT%2B8
+        username: root
+        password: 123
+        driver-class-name: com.mysql.cj.jdbc.Driver
