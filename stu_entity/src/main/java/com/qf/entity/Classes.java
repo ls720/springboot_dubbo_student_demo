@@ -16,6 +16,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("t_class")
 public class Classes extends BaseEntity{
+    private int cid;
     private String cname;
+
     private int cnum;
 }

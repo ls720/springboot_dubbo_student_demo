@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+        form{
+            width:600px;
+            height:auto;
+            margin:0px auto;
+        }
+    </style>
 </head>
 <body>
 <h1>班级列表</h1>
+<form>
 <table>
     <tr>
         <td>id</td>
@@ -15,10 +23,11 @@
     </tr>
     <tr th:each="cls : ${clas}">
         <td th:text="${cls.id}"></td>
-        <!--<td th:text="${cls.cid}"></td>-->
+        <td th:text="${cls.cid}"></td>
         <td th:text="${cls.cname}"></td>
         <td th:text="${cls.cnum}"></td>
     </tr>
-</table>>
+</table>
+</form>
 </body>
 </html>

@@ -7,6 +7,7 @@ import com.qf.entity.Classes;
 import com.qf.entity.Student;
 import com.qf.service.IClassesService;
 import com.qf.service.IStudentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
  * @Date 2019/11/30
  */
 @Service
+@Slf4j
 public class StudentServiceImpl implements IStudentService {
    @Autowired
    private IStudentMapper stuMapper;
@@ -28,7 +30,9 @@ public class StudentServiceImpl implements IStudentService {
         for(Student stu:stuList){
             Integer cid=stu.getCid();
             Classes classes=classesService.queryById(cid);
+
             stu.setCls(classes);
+
         }
         return stuList;
     }
@@ -48,10 +52,10 @@ public class StudentServiceImpl implements IStudentService {
         Student student=stuMapper.selectById(id);
 
         return student;
-}
+                }
 
-    @Override
-    public void updateById(Student student) {
-            stuMapper.updateById(student);
-    }
-}
+@Override
+public void updateById(Student student) {
+        stuMapper.updateById(student);
+        }
+        }

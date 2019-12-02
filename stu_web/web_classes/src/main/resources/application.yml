@@ -3,6 +3,8 @@ dubbo:
       name: cls-service
     registry:
         address: zookeeper://119.23.255.72:2181
+protocol:
+    port: -1
 spring:
     cache: false
     datasource:
